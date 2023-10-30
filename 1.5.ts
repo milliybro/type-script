@@ -1,19 +1,18 @@
 // str nomli satrdagi katta harflarni kichigiga kichiklarini kattasiga almashtiruvchi switchLetters(str) nomli funksiya tuzing.
 
 
-let stringValue: string = "Abdulaziz Programmer";
+const switchLetters = (str: string): string => {
+  let res = "";
+  for (let i = 0; i < str.length; i++) {
+    let el = str.charCodeAt(i);
 
-function switchLetters(input: string): string {
-  let value: string = "";
-  for (let string of input) {
-    if (string === string.toUpperCase()) {
-    value += string.toLowerCase();
+    if (64 < el && el < 91) {
+      res += str[i].toLowerCase();
     } else {
-    value += string.toUpperCase();
+      res += str[i].toUpperCase();
     }
   }
-  return value;
-}
+  return res;
+};
 
-let qiymat: string = switchLetters(stringValue);
-console.log(qiymat);
+console.log(switchLetters("Abdulaziz Programmer"));

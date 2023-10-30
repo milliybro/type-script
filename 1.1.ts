@@ -1,16 +1,13 @@
 // Ushbu ifodani hisoblovchi getSum(n) nomli funksiya tuzing.
 
-function getSum(n: number): number {
-  let odd: number = 1;
-  let even: number = 1;
-  for (let i:number = 1; i <= n * 2; i++) {
-    if (i % 2 == 0) {
-      even *= i;
-    } else {
-      odd *= i;
-    }
+const getSum = (n: number): number => {
+  let res = 1;
+  let res1 = 1;
+  for (let i = 1; i <= n; i++) {
+    res *= 2 * i - 1;
+    res1 *= 2 * i;
   }
-  return odd + even;
-}
-let res = getSum(3);
-console.log(res);
+  return res + res1;
+};
+
+console.log(getSum(3));

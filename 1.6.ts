@@ -15,6 +15,4 @@ function changeObjToArr(input: givenObject): string[] {
   }
   return value;
 }
-
-let objValue: any[] = changeObjToArr(obj);
-console.log(objValue);
+console.log(changeObjToArr(obj));

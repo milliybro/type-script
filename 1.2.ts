@@ -1,16 +1,16 @@
 // Elementlari musbat butun sonlardan iborat bolgan arr nomli massiv berilgan. Eng kop xonali sonni chiqaruvchi getHighestNumberOfDigits(arr) nomli funksiya hosil qiling.
 
-let arr: number[] = [1589, 31851, 512, 180975, 78];
-
-function getHighestNumberOfDigits(input: number[]): number {
-  let longNumber: number = arr[0];
-  for (let el of input) {
-    if (el > longNumber) {
-      longNumber = el;
+function getHighestNumberOfDigits(arr: number[]): void {
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    let el = arr[i];
+    if (max < el) {
+      max = el;
     }
   }
-  return longNumber;
+  console.log(max);
 }
 
-let resp = getHighestNumberOfDigits(arr);
-console.log(resp);
+let arr = [1589, 31851, 512, 180975, 78];
+
+getHighestNumberOfDigits(arr);

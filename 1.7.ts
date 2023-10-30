@@ -28,6 +28,4 @@ function seperateStudents(input: studentType[]): object {
     contract: contract,
   };
 }
-
-let studentValue: object = seperateStudents(students);
-console.log(studentValue);
+console.log(seperateStudents(students));

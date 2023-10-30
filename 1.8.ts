@@ -26,7 +26,5 @@ function getTotalPages(input: allBooks[]): number {
   }
   return allPages;
 }
-
-let booksValue: number = getTotalPages(books);
-console.log(booksValue);
+console.log(getTotalPages(books));
 
